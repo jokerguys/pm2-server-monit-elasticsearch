@@ -1,25 +1,30 @@
 {
-  "name": "pm2-server-monit",
+  "name": "pm2-server-monit-elasticsearch",
   "version": "2.5.3",
-  "description": "Rack to monitor a server",
+  "description": " A port of pm2-server-monit module to ship PM2 server monitoring logs to elasticsearch.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pm2-hive/pm2-server-monit"
+    "url": "https://github.com/jokerguys/pm2-server-monit-elasticsearch"
   },
   "config": {
     "drive": "/",
-    "small_interval": "1"
+    "interval": "1"
   },
   "scripts": {
     "start": "node app",
     "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {
-    "pmx": "latest"
+    "async": "^2.6.1",
+    "elasticsearch": "^15.0.0",
+    "pm2": "^2.10.4",
+    "pmx": "latest",
+    "winston": "^3.0.0",
+    "winston-elasticsearch": "^0.7.0"
   },
   "apps": [
     {
-      "name": "pm2-server-monit",
+      "name": "pm2-server-monit-elasticsearch",
       "script": "app.js",
       "max_memory_restart": "150M"
     }
