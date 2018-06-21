@@ -1,8 +1,3 @@
-
-<div align="center">
-    <img src="https://github.com/pm2-hive/pm2-server-monit/raw/master/server-monit.png">
-</div>
-
 ## Description
 A port of pm2-server-monit that automatically monitor vital signs of your server and ships the details to Elasticsearch via winston and winston-elasticsearch.
 
