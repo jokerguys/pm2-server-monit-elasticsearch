@@ -44,6 +44,8 @@ pm2 set pm2-server-monit-elasticsearch:elasticsearch_user username
 pm2 set pm2-server-monit-elasticsearch:elasticsearch_password password
 ```
 
+NOTE: If basic authentication is enabled on your elasticsearch, specially via Search Guard, provide username and password as part of host url e.g. "http://username:pass@localhost:9200"
+
 :warning: If this module uses too much CPU, set the `interval` value to 10 or more.
 
 ## Uninstall
